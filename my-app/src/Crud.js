@@ -27,7 +27,9 @@ function Crud() {
                 <td>{current.name}</td>
                 <td>{current.price}</td>
                 <td>
-                  <button className="edit">Edit</button>
+                  <button onClick={handleSubmit} className="edit">
+                    Edit
+                  </button>
                   <button className="delete">Delete</button>
                 </td>
               </tr>
