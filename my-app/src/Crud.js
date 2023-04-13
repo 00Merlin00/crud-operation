@@ -30,7 +30,7 @@ function Crud() {
                   <button onClick={handleSubmit} className="edit">
                     Edit
                   </button>
-                  <button className="delete">Deleted</button>
+                  <button className="delete">Delete</button>
                 </td>
               </tr>
             ))}
