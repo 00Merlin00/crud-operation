@@ -18,30 +18,39 @@ function Crud() {
   ];
 
   const [lists, setLists] = useState(list);
-  const [updateState, setUpdateState] = useState();
+  const [updateState, setUpdateState] = useState(-1);
   function handleEdit(id) {
     setUpdateState(id);
   }
 
-  function handleDelete(e, id) {
-    e.preventDefault();
+  function handleDelete(id) {
     const newList = lists.filter((li) => li.id !== id);
-
     setLists(newList);
   }
-  console.log(lists, "listlistlist");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const name = event.target.elements.name.value;
+    const price = event.target.elements.price.value;
+    const newList = lists.map((li) =>
+      li.id === updateState ? { ...li, name: name, price: price } : li
+    );
+
+    setLists(newList);
+    setUpdateState(-1);
+  }
+
   return (
     <div className="crud">
       <div>
         <AddList setLists={setLists} />
-        <form>
+        <form onSubmit={handleSubmit}>
           <table>
             <tbody>
               {lists.map((current) =>
                 updateState === current.id ? (
                   <EditList
                     current={current}
-                    setUpdateState={setUpdateState}
                     lists={lists}
                     setLists={setLists}
                   />
@@ -59,7 +68,7 @@ function Crud() {
                       <button
                         type="submit"
                         className="delete"
-                        onClick={(e) => handleDelete(e, current.id)}
+                        onClick={() => handleDelete(current.id)}
                       >
                         Delete
                       </button>

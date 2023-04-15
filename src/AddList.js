@@ -6,13 +6,11 @@ export const AddList = ({ setLists }) => {
   const [input2, setInput2] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
-    const name = event.target.elements.name.value;
-    const price = event.target.elements.price.value;
 
     const newList = {
-      id: 3,
-      name,
-      price,
+      id: Math.random(),
+      name: input1,
+      price: input2,
     };
 
     setLists((prevList) => {

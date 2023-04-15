@@ -1,6 +1,6 @@
 import React from "react";
 
-const EditList = ({ current, lists, setLists }) => {
+const EditList = ({ current, lists, setLists, setUpdateState }) => {
   function handleInputName(event) {
     const value = event.target.value;
     const newList = lists.map((li) =>
@@ -21,7 +21,7 @@ const EditList = ({ current, lists, setLists }) => {
     <tr>
       <td>
         <input
-          type="text"
+          type="tex"
           onChange={handleInputName}
           name="name"
           value={current.name}
@@ -36,7 +36,9 @@ const EditList = ({ current, lists, setLists }) => {
         ></input>
       </td>
       <td>
-        <button type="submit">Update</button>
+        <button type="submit" onClick={() => setUpdateState()}>
+          Update
+        </button>
       </td>
     </tr>
   );
