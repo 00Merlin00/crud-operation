@@ -12,7 +12,7 @@ const EditList = ({ current, lists, setLists, setUpdateState }) => {
   function handleInputPrice(event) {
     const value = event.target.value;
     const newList = lists.map((li) =>
-      li.id === current.id ? { ...li, price: valu } : li
+      li.id === current.id ? { ...li, price: value } : li
     );
 
     setLists(newList);
