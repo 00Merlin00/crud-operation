@@ -33,7 +33,7 @@ function Crud() {
     const name = event.target.elements.name.value;
     const price = event.target.elements.price.value;
     const newList = lists.map((li) =>
-      li.id === updateState ? { ...li, nam: name, price: price } : li
+      li.id === updateState ? { ...li, na: name, price: price } : li
     );
 
     setLists(newList);
