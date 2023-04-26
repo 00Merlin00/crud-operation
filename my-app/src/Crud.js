@@ -57,7 +57,7 @@ function Crud() {
                 ) : (
                   <tr>
                     <td>{current.name}</td>
-                    <td>{current.pric}</td>
+                    <td>{current.price}</td>
                     <td>
                       <button
                         onClick={() => handleEdit(current.id)}
