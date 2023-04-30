@@ -61,7 +61,7 @@ function Crud() {
                     <td>
                       <button
                         onClick={() => handleEdit(current.id)}
-                        className="edit"
+                        className="edi"
                       >
                         Edit
                       </button>
