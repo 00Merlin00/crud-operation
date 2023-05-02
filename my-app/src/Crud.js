@@ -61,14 +61,14 @@ function Crud() {
                     <td>
                       <button
                         onClick={() => handleEdit(current.id)}
-                        className="edi"
+                        className="edit"
                       >
                         Edit
                       </button>
                       <button
                         type="submit"
-                        className="delete"
-                        onClick={() => handleDelete(current.id)}
+                        className="delet
+                        onClick={() => handleDlete(current.id)}
                       >
                         Delete
                       </button>
