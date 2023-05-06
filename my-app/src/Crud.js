@@ -67,7 +67,7 @@ function Crud() {
                       </button>
                       <button
                         type="submit"
-                        className="delet"
+                        className="delete"
                         onClick={() => handleDelete(current.id)}
                       >
                         Delete
