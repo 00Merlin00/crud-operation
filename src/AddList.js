@@ -14,7 +14,7 @@ export const AddList = ({ setLists }) => {
     };
 
     setLists((prevList) => {
-      return prevList.concat(newList);
+      return prevList.concat(newLis);
     });
     setInput1("");
     setInput2("");
