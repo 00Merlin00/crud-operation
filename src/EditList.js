@@ -1,4 +1,5 @@
 import React from "react";
+import { useContext } from "react";
 
 const EditList = ({ current, lists, setLists, setUpdateState }) => {
   function handleInputName(event) {
