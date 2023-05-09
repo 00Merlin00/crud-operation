@@ -21,7 +21,7 @@ const EditList = ({ current, lists, setLists, setUpdateState }) => {
     <tr>
       <td>
         <input
-          type="text"
+          type="tex"
           onChange={handleInputName}
           name="name"
           value={current.name}
