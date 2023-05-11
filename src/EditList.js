@@ -22,7 +22,7 @@ const EditList = ({ current, lists, setLists, setUpdateState }) => {
       <td>
         <input
           type="text"
-          onChange={handleInputNam}
+          onChange={handleInputName}
           name="name"
           value={current.name}
         ></input>

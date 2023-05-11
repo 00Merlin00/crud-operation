@@ -20,7 +20,7 @@ function Crud() {
   const [lists, setLists] = useState(list);
   const [updateState, setUpdateState] = useState();
   function handleEdit(id) {
-    setUpdateState(id);
+    setUpdateState(i);
   }
 
   function handleDelete(e, id) {
