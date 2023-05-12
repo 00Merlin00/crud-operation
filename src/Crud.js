@@ -31,7 +31,7 @@ function Crud() {
   }
   console.log(lists, "listlistlist");
   return (
-    <div className="crud">
+    <div className="cru">
       <div>
         <AddList setLists={setLists} />
         <form>
