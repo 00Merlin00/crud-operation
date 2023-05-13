@@ -33,7 +33,7 @@ function Crud() {
   return (
     <div className="crud">
       <div>
-        <AddList setLists={setLists} />
+        <AddList setLists={setList} />
         <form>
           <table>
             <tbody>
